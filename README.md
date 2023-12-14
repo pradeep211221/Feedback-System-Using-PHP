@@ -27,3 +27,27 @@ Welcome to the Feedback System Web Project! This web application is designed to 
 1. Clone the repository:
    ```bash
    git clone https://github.com/pradeep211221/pradeep211221.github.io.git
+
+
+Configure the database:
+
+Create a MySQL database named feedbacksystem.
+Import the provided SQL schema from database/feedbacksystem.sql.
+Update database connection details:
+
+Open db.php.
+Update the $servername, $username, $password, and $dbname variables with your database connection details.
+Start your web server and navigate to the project directory.
+
+Open the application in your browser.
+
+Usage
+Users can access the feedback form and submit their feedback based on the selected category.
+
+Administrators can log in and access the dashboard to view, analyze, and respond to feedback.
+
+Contributing
+Contributions are welcome! Feel free to open issues or pull requests for bug fixes, enhancements, or new features.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
