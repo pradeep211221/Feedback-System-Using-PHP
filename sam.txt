@@ -1,0 +1,48 @@
+    <script>
+        var ctx = document.getElementById('barChart').getContext('2d');
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: <?php echo json_encode($labels);?>,
+                datasets: [{
+                    label: 'Registration Count',
+                    data: <?php echo json_encode($data); ?>,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                beginAtZero: true,
+                stepSize: 1 
+            },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        var dateCtx = document.getElementById('dateChart').getContext('2d');
+        var dateChart = new Chart(dateCtx, {
+            type: 'bar',
+            data: {
+                labels: <?php echo json_encode($dateLabels); ?>,
+                datasets: [{
+                    label: 'Date Registration Count',
+                    data: <?php echo json_encode($dateData); ?>,
+                    backgroundColor: 'rgba(192, 75, 75, 0.2)',
+                    borderColor: 'rgba(192, 75, 75, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
